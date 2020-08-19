@@ -1,37 +1,10 @@
-.status-bar {
-  display: flex;
-  justify-content: center;
-  /* 기본적으로 모든 요소들을 중앙으로 설정해 놓는다  */
-}
-.status-bar__column {
-  width: 33%;
-}
-
-.status-bar__column:first-child span {
-  margin-right: 5px;
-}
-
-.status-bar__column:nth-child(2) {
-  display: flex;
-  justify-content: center;
-  /* status-bar__column의 두번째 부분인 시계를 center로 놓는 부분이다.  */
-}
-.status-bar__column:last-child {
-  display: flex;
-  justify-content: flex-end;
-  /* justify-content: flex-end는 상태바의 마지막인 베터리 부분을 끝으로 보내는 코드이다.  */
-  align-items: center;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+@import "reset.css";
+@import "status-bar.css";
 body {
   font-family: "Open Sans Condensed", sans-serif;
 }
 
 /* google에 google font에서 원하는 것을 누르고 Embed-->@import를 통해 폰트를 바꾸는 방법이다.    */
 
-.status-bar__column .fa-battery-three-quarters {
-  margin: 0px 3px;
-
-  /* 각 아이콘을 오른쪽으로 떨어뜨리기 위해서 margin으로 떨어뜨린다. 위 -오른쪽 - 아래- 왼쪽 순이다    */
 }
