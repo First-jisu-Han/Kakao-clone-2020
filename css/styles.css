@@ -4,7 +4,23 @@
 body {
   font-family: "Open Sans Condensed", sans-serif;
 }
-
 /* google에 google font에서 원하는 것을 누르고 Embed-->@import를 통해 폰트를 바꾸는 방법이다.    */
 
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* CSS에서 텍스트의 가로 가운데 정렬은 text-align 속성 */
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  color: gray;
+  margin-bottom: 50px;
 }
