@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
 @import "reset.css";
 @import "status-bar.css";
+@import "variables.css";
 body {
   font-family: "Open Sans Condensed", sans-serif;
 }
@@ -23,4 +24,28 @@ body {
   width: 60%;
   color: gray;
   margin-bottom: 50px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  /* input의 경계선을 없애는 것 */
+  font-size: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* 밑줄 형식으로 1px의 실선인데, 검은색의 색상 선명도를 rgba로 으로 나타냄 */
+  margin-bottom: 20px;
+  transition: border-color 5s ease-in-out;
+  /* border의 색상이 5초뒤에 서서히 바뀌게 된다. */
+}
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#login-form input:focus {
+  border-color: var(--yellow);
+  /* border의 색상이 설정한 노란색 계열의 색상으로 바뀌게된다. variables.css 파일의 색상을 참고하게 되는 코드이다. */
 }
