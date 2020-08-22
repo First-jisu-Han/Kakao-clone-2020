@@ -34,9 +34,16 @@
         If you have a Kokoa Account,log in with your email or phone number.
       </p>
 
-      <form id="login-form">
-        <input type="text" placeholder="Email or phone number" />
-        <input type="password" placeholder="Password" />
+      <form action="friends.html" id="login-form" method="GET">
+        <!-- method="post"는 백엔드 서버에 정보를 젆송하는 방식 
+        method="get"은 URL에 포함되어도 상관없는 정보들을 Get 방식으로 보내는 것이라 username 이나 password를 get
+      방식으로 내보내면 안된다. -->
+        <input
+          name="username"
+          type="text"
+          placeholder="Email or phone number"
+        />
+        <input name="password" type="password" placeholder="Password" />
         <!-- placeholder는 란에 비밀번호를 입력해주세요 와 같이 희미한 글자로 써있다가 
         입력하는 즉시 사라지는 그런 역할을 한다. -->
         <input type="submit" value="Log In" />
