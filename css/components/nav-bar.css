@@ -1,8 +1,38 @@
 .nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  /* 여기 까지는 네비게이션 바들이 밑으로 붙게 하는 조건코드이며, position:fixed로 고정한다. */
   background-color: #f9f9fa;
-  padding: 20px 40px;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  /* 내 네이버 블로그의 'Box 모델 Css 설정시 주의점' 에 언급되어있는부분
+  width를 100%로 주고 padding까지 주었기 때문에 네비게이션바의 크기가 padding 설정한 
+  것만큼 커지게 된다. 따라서  box-sizing: border-box; 을 통하여 padding을 
+  설정해도 화면의 width:100%로 설정한 것에 변화가 없도록 크기를 늘리지 말아달라는 코드이며
+  이렇게 설정하면 네비게이션바가 아이콘이 잘리는 일 없이 정상적으로 다 보이게 된다.    */
+  border-top: 1px solid rgba(121, 121, 121, 0.4);
 }
 .nav__list {
   display: flex;
   justify-content: space-between;
+}
+.nav__icon {
+  color: #2e363e;
+  position: relative;
+}
+.nav__notification {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  border-radius: 30px;
+  /* 테두리를 둥글게 만든다. */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  /* 부모-자식 설정하기 !  */
+  left: 30px;
 }
