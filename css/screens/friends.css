@@ -3,8 +3,14 @@
   display: block;
   background-color: #f9f9fa;
   padding: 10px 0px;
+  margin-bottom: 5px;
 }
 
 #friends-display i {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+  /* 프로필 이미지와 Friends 글자의 왼쪽 틈 크기를 맞춘 것임. */
 }
