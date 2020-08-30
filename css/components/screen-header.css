@@ -5,6 +5,7 @@
   /* 프로필 이미지와 Friends 글자의 왼쪽 틈 크기를 맞춘 것임. */
   align-items: center;
   /* 수평 방향 가운데 정렬 */
+  margin-bottom: 15px;
 }
 
 .screen-header__title {

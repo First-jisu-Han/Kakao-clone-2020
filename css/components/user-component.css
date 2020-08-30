@@ -1,11 +1,12 @@
 .user-component {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 .user-component__column {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  justify-content: space-between;
 }
 .user-component__column2 {
   display: flex;
@@ -40,7 +41,36 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-.user-component__avatar user-component__avatar--xl {
-  width: 80px;
-  height: 80px;
+.user-component__avatar--xl {
+  width: 70px;
+  height: 70px;
 }
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding-top: 15px;
+}
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__text2 {
+  margin-right: 375px;
+  font-weight: 200;
+}
+.user-component__column span,
+.fa-chevron-right {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* 이코드는 channel에 2 하고 >  하나하나 일일이 색상을 다 바꿔버리는 코드
+자꾸 오류가 떠서 이렇게 설정함.    */
