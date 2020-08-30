@@ -22,16 +22,6 @@
   position: relative;
 }
 .nav__notification {
-  background-color: red;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  border-radius: 30px;
-  /* 테두리를 둥글게 만든다. */
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
   position: absolute;
   /* 부모-자식 설정하기 !  */
   left: 30px;

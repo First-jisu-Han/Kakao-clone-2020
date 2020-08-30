@@ -74,3 +74,15 @@
 }
 /* 이코드는 channel에 2 하고 >  하나하나 일일이 색상을 다 바꿔버리는 코드
 자꾸 오류가 떠서 이렇게 설정함.    */
+
+.user-component__time {
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* .user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}*/
