@@ -26,3 +26,12 @@
   /* 부모-자식 설정하기 !  */
   left: 30px;
 }
+.dot {
+  background-color: red;
+  border-radius: 30px;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
