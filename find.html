@@ -31,20 +31,20 @@
     </header>
 
     <main class="main-screen">
-      <div class="find-icons">
-        <div class="find-icons__icon">
+      <div class="icon-row">
+        <div class="icon-row__icon">
           <i class="fas fa-qrcode"></i>
           <span>Qr Code</span>
         </div>
-        <div class="find-icons__icon">
+        <div class="icon-row__icon">
           <i class="far fa-address-book"></i>
           <span>Add by Contacts</span>
         </div>
-        <div class="find-icons__icon">
+        <div class="icon-row__icon">
           <i class="fas fa-fingerprint"></i>
           <span>Add by ID</span>
         </div>
-        <div class="find-icons__icon">
+        <div class="icon-row__icon">
           <i class="far fa-envelope"></i>
           <span>Invite</span>
         </div>
@@ -75,7 +75,13 @@
           </div>
         </div>
 
-        <div class="open-post__column"></div>
+        <div class="open-post__column">
+          <img src="https://avatars3.githubusercontent.com/u/66197538" />
+          <div class="open-post__heart-count">
+            <i class="fas fa-heart fa-xs"></i><span>326</span>
+          </div>
+          <!-- fa-xs는 크기 조정에 사용한다. fa-xs를 붙여주면 크기를 작게 사용 가능하다. -->
+        </div>
       </div>
     </main>
 
@@ -88,7 +94,7 @@
         <li class="nav__icon">
           <a class="nav__link" href="chats.html">
             <span class="nav__notification badge">1</span>
-            <i class="fas fa-comments fa-2x"></i>
+            <i class="far fa-comments fa-2x"></i>
           </a>
         </li>
         <li class="nav__icon">
