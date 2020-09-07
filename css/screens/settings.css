@@ -1,0 +1,20 @@
+.settings-setting {
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  /* display:flex; 는 align-items:center;를 사용하기 위해서 
+  설정하는 것이다. */
+  justify-content: space-between;
+}
+
+.settings-setting i {
+  margin-right: 20px;
+  font-size: 22px;
+  opacity: 0.5;
+}
+
+.settings__setting-column:last-child {
+  opacity: 0.5;
+}
