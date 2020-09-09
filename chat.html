@@ -47,8 +47,26 @@
         <div class="message-row__content">
           <span class="message__author">First_jisu_i</span>
           <div class="message__info">
-            <span class="message__bubble">Hi</span>
+            <span class="message__bubble">Hellow my name is Jisu-han!</span>
             <span class="message__time">22:07</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <!-- message-row  와  message-row--own 이라는 두 클래스를 가진다.  -->
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__time">22:09</span>
+            <span class="message__bubble">Hellow nice to meet you ~</span>
+            <!-- message-row는 display:flex; 상태이기 때문에 justify-content
+        를 사용하여 정렬가능하다.  -->
+            <!-- 추가적으로 message__time와 message__bubble의 순서를 바꾸려면 둘의 
+        html을 바꾸는 방법을 사용했지만, css를 통해서도 바꿀 수 있다. 
+    flex-direction:row-reverse; 코드를 사용하면 말풍선과 시간이 거꾸로 적용된다.
+    .message-row--own .message__info {
+  flex-direction: row-reverse;
+} 말풍선과 시간의 container이자 직속부모인 message__info에 적용해주면 말풍선과 시간이 거꾸로 적용된다.  
+-->
           </div>
         </div>
       </div>

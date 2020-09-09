@@ -63,11 +63,3 @@
   top: 10px;
   z-index: 1;
 }
-
-.chat__timestamp {
-  color: white;
-  background-color: #92a4b2;
-  padding: 14px;
-  font-size: 15px;
-  border-radius: 15px;
-}
