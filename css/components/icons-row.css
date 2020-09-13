@@ -1,17 +1,21 @@
-.icon-row {
+.icon-row,
+.icon-row__second {
   display: flex;
   justify-content: space-between;
   /* 수평방향으로 적용되는 것이다. ㅡㅡㅡㅡㅡㅡㅡ이런 방향으로  */
-  padding-bottom: 25px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.icon-row__icon {
+.icon-row__icon,
+.icon-row__icon__second {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.icon-row__icon i {
+.icon-row__icon i,
+.icon-row__icon__second i {
   font-size: 40px;
 }
 

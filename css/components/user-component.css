@@ -86,3 +86,11 @@
   flex-direction: column;
   align-items: flex-end; 
 }*/
+
+.user-component__Channel-icon i {
+  padding: 10px;
+  font-size: 35px;
+  margin-right: 20px;
+  background-color: var(--yellow);
+  border-radius: 15px;
+}
