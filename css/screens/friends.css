@@ -33,6 +33,7 @@
 #splash-screen {
   background-color: var(--yellow);
   position: absolute;
+
   /*   position:absolute; 이고 부모는 바로 위에 속하는 태그지만 
   밑의 코드를 통해서 부모가 body가 되게끔 한다.  */
   width: 100vw;
@@ -55,5 +56,6 @@
   animation: SplashScreenDelete 0.4s ease-in-out forwards;
   /* forwards는 마지막 keyframes를 기억한다. */
   animation-delay: 2s;
-  /* 애니메이션을 지연시킨다. */
+  /* 애니메이션을 지연시킨다. 애니메이션 시작 전에 기다려야하는 시간은
+  2초인 것이다. */
 }

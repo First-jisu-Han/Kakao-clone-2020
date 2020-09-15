@@ -16,3 +16,17 @@
 .screen-header__icons span {
   margin-right: 15px;
 }
+
+@keyframes rotateCog {
+  from {
+    transfrom: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+    /* 2D로 그자리에서 아이콘이 360도로 돌게된다. */
+  }
+}
+
+.screen-header__icons .fa-cog {
+  animation: rotateCog 1s ease-in-out infinite;
+}

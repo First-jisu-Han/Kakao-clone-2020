@@ -98,3 +98,27 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes iconHeartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: crimson;
+    transform: scale(5);
+    /* 크기를 조율함. */
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* will-change는 기본적으로 브라우저에게 뭔가가 바뀔거라고 이야기해준다.
+    브라우저를 돕는행위이다:    */
+  animation: iconHeartBeat 1s linear infinite;
+  /* linear 라는 새로운 개념 */
+}
