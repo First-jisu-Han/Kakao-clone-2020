@@ -19,43 +19,18 @@
 }
 
 .alt-header__column:nth-child(2) {
-  text-align: center;
-}
-/* 컬럼 끼리 서로 떨어뜨려놓기 위한 코드이다. */
+  margin-right: 110px;
+} /* 컬럼 끼리 서로 떨어뜨려놓기 위한 코드이다. */
 
 .alt-header__column span :last-child {
-  margin-left: 20px;
+  margin-left: auto;
 }
 
 #chat-screen .status-bar,
 #chat-screen .alt-header {
-  position: fixed;
   width: 100%;
   /*  width: 100%; 을 줘야지 icon들이 밀리지 않는다 */
   background-color: #abc1d1;
   box-sizing: border-box;
   top: 0;
-}
-
-.main-chat {
-  margin-top: 150px;
-  display: flex;
-  /* flex로 설정해야 timestamp의 크기가 조절이된다.  */
-  flex-direction: column;
-  /* flex-direction: column; 설정은 필수적이다. */
-  align-items: center;
-  /* 의문점: chat__timestamp에 적용을 하면 왜 똑같이 적용이 안될까 ?  */
-}
-
-#chat-screen .status-bar {
-  z-index: 2;
-  /* z-index는 layer와 같은 기능을 한다. 나는 nav바와 status바 사이 간격을
-  margin을 통해서 띄어놔서 티가나지않지만, margin을 적용하지 않을때는 
-  status바가 nav를 가리게 되는 문제가 있다. position:fixed, absolute 등의 문제를
-  해결 할 수 있다. 
-    */
-}
-#chat-screen .alt-header {
-  top: 10px;
-  z-index: 1;
 }

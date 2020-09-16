@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 500vh;
 }
 
 .chat__timestamp {
@@ -76,4 +76,80 @@
 }
 .reply__column button i {
   opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(600px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.main-chat {
+  margin-top: 20px;
+  display: flex;
+  /* flex로 설정해야 timestamp의 크기가 조절이된다.  */
+  flex-direction: column;
+  /* flex-direction: column; 설정은 필수적이다. */
+  align-items: center;
+  /* 의문점: chat__tsimestamp에 적용을 하면 왜 똑같이 적용이 안될까 ?  */
+  animation: fadeIn 1.5s linear;
+  animation-delay: 2s;
+  /* 내가 임의적으로 적용한 코드인데, 카톡 대기화면창이 
+  2초나오고 main-chat부분이 나오는 것이기 때문에 2초정도 fadeIn
+  애니메이션을 지연시키고 fadeIn 애니메이션이 실행되도록 하였다. */
+}
+
+#chat-screen .status-bar {
+  z-index: 2;
+  /* z-index는 layer와 같은 기능을 한다. 나는 nav바와 status바 사이 간격을
+  margin을 통해서 띄어놔서 티가나지않지만, margin을 적용하지 않을때는 
+  status바가 nav를 가리게 되는 문제가 있다. position:fixed, absolute 등의 문제를
+  해결 할 수 있다. 
+    */
+}
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+
+@keyframes SplashScreenDelete {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    /* opacity가 0이면 안쪽의 화면이 보이나, 바깥쪽의 화면의 잔해가 
+    남아있고, 아이콘들의 클릭이 불가능하다. 따라서 visiblity:hidden;( 마우스에 
+    걸리지 않게 빠져버린다) 코드를 통하여 클릭가능한 상태로 만든다.  */
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  animation: SplashScreenDelete 0.4s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.reply:focus-within .reply__column:first-child {
+  /* reply내부에 어떤 element가 focus되어 있다면이라는 뜻 */
+  opacity: 0;
+}
+
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within .fa-arrow-up {
+  opacity: 0;
 }
