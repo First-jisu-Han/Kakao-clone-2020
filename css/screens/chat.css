@@ -15,6 +15,7 @@
 #chat-screen .alt header {
   position: fixed;
   width: 100%;
+  background-color: #abc1d1;
 }
 
 .reply {
@@ -28,12 +29,17 @@
   align-items: center;
   /* 수직 방향 center */
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
+
 .reply input {
   height: 35px;
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  /* 대화입력창을 focus하면 적용되는 효과를 0.3초만에 보여주는
+  코드이다. 이 코드를 입력안하면 그냥 기본값으로 바로 적용이된다.  */
 }
 .reply .reply__column:first-child {
   width: 10%;
@@ -71,9 +77,6 @@
   /* 전송 버튼을 눌러도 아무런 효과가 없게 하는 코드 */
 }
 
-.reply i {
-  opacity: 0.6;
-}
 .reply__column button i {
   opacity: 1;
 }
@@ -144,12 +147,25 @@
   animation-delay: 2s;
 }
 
-.reply:focus-within .reply__column:first-child {
-  /* reply내부에 어떤 element가 focus되어 있다면이라는 뜻 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  /*focus-within=> reply내부에 어떤 element가 focus되어 있다면이라는 뜻 */
   opacity: 0;
 }
 
-.reply:focus-within .fa-smile-wink,
-.reply:focus-within .fa-arrow-up {
-  opacity: 0;
+.reply:focus-within input {
+  width: 95vw;
+  transform: translateX(-12%) translateY(-98%);
+  /* 대화입력창을 클릭하는 순간 왼쪽에 빈공간이 보이지 않도록
+  왼쪽의 공간을 없애는 효과이다.   */
+  /* input이 제자리에서 width만 변경되도록  translateY(-75%);을 
+  설정해 준 것이다. */
+}
+
+.reply:focus-within {
+  transform: translateY(98%);
+  /* reply란에 클릭을 한다면 대화창 및 모든 것
+  들이 밑으로 70떨어진다 ---> input창은 내려가지 않고 정상적으로 올라
+  와 있도록 한다. 따라서 위의 코드처럼 translateY(-70%);을 추가했다.*/
 }
