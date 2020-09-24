@@ -6,12 +6,35 @@
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  padding: 10px 0px;
   justify-content: space-between;
 }
-.user-component__column2 {
+
+@keyframes UserAnimation {
+  from {
+    transform: translateY(19px);
+  }
+  to {
+    transform: translateY(-19px);
+  }
+}
+.host_user:hover {
+  animation: UserAnimation 3s ease-in-out;
+  border-top: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow);
+}
+.host_user {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.user-component__column2,
+.user-component__column3 {
   display: flex;
   align-items: center;
+  padding: 10px 0px;
 }
+
 .user-component__avatar {
   width: 70px;
   height: 70px;
@@ -19,24 +42,24 @@
   margin-right: 20px;
 }
 
-.user-componet__title {
-  margin-right: 200px;
+.user-component__title {
+  margin-right: 195px;
   font-weight: 700px;
   font-size: 20px;
 }
 
-.user-componet__title2 {
-  margin-right: 150px;
+.user-component__title2 {
+  margin-right: 155px;
   font-weight: 700px;
   font-size: 20px;
 }
 
 .user-component__muisic {
-  width: 150px;
+  width: 165px;
   height: 66px;
 }
 
-.user-componet__subtitle {
+.user-component__subtitle {
   margin-top: 5px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -54,8 +77,8 @@
 
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 .friends-screen__channel-header {
   margin-bottom: 30px;
