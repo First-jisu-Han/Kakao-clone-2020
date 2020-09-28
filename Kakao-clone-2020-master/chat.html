@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting</title>
+  </head>
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>81%</span>
+        <i class="fas fa-battery-three-quarters"></i>
+        <i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html">
+          <i class="fas fa-angle-left fa-2x"></i>
+        </a>
+      </div>
+      <div class="alt-header__column">
+        <h4 class="alt-header__title">First_jisu_i</h4>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-bars fa-lg"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <!-- 두개의 클래스 이름을 가진다 . main screen    main chat -->
+      <!-- 추가적으로, nav와 status 요소들에 의해서 가려져 있게된다. 따라서 margin-top을 css로 설정해서 보이게 만드는 것이다.  -->
+      <div class="chat__timestamp">Monday, September 07, 2020</div>
+      <!-- 밑에서 부터는 카톡 대화창을 만든것이다. -->
+      <div class="message-row">
+        <img src="https://avatars3.githubusercontent.com/u/66197538" />
+        <div class="message-row__content">
+          <span class="message__author">First_jisu_i</span>
+          <div class="message__info">
+            <span class="message__bubble">Hellow my name is Jisu-han!</span>
+            <span class="message__time">22:07</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row message-row--own">
+        <!-- message-row  와  message-row--own 이라는 두 클래스를 가진다.  -->
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__time">22:09</span>
+            <span class="message__bubble">Hellow nice to meet you ~</span>
+            <!-- message-row는 display:flex; 상태이기 때문에 justify-content
+        를 사용하여 정렬가능하다.  -->
+            <!-- 추가적으로 message__time와 message__bubble의 순서를 바꾸려면 둘의 
+        html을 바꾸는 방법을 사용했지만, css를 통해서도 바꿀 수 있다. 
+    flex-direction:row-reverse; 코드를 사용하면 말풍선과 시간이 거꾸로 적용된다.
+    .message-row--own .message__info {
+  flex-direction: row-reverse;
+} 말풍선과 시간의 container이자 직속부모인 message__info에 적용해주면 말풍선과 시간이 거꾸로 적용된다.  
+-->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+
+      <div class="reply__column">
+        <input type="text" placeholder="Write here the message!" />
+        <i class="far fa-smile-wink fa-lg"></i>
+        <button>
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+    <div id="splash-screen">JISU<i class="fas fa-comments"></i></div>
+
+    <div id="mobileForbid">
+      <span>You can't manipulate the screen.</span>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </body>
+</html>

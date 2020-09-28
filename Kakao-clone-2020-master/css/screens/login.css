@@ -1,0 +1,68 @@
+.welcome-header {
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* CSS에서 텍스트의 가로 가운데 정렬은 text-align 속성 */
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.welcome-header__text {
+  width: 60%;
+  color: gray;
+  margin-bottom: 50px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#login-form input {
+  padding: 15px 0px;
+  border: none;
+  /* input의 경계선을 없애는 것 */
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#login-form input:not([type="submit"]) {
+  /* submit 형식 즉, login 창의 경우에 다른 input 과 같이 5초뒤 border-bottom의 색이 노란색으로 변하기 때문에 
+    이 부분을 수정하기 위해서 not을 사용하여 submit type를 제외하고 적용한다.   */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* 밑줄 형식(boder-bottom)으로 1px의 실선, 검은색의 색상 선명도를 rgba로 으로 나타냄 */
+  transition: border-color 5s ease-in-out;
+  /* border의 색상이 5초뒤에 서서히 바뀌게 된다. */
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+/* border의 색상이 설정한 노란색 계열의 색상으로 바뀌게된다. variables.css 파일의 색상을 참고하게 되는 코드이다. */
+/* variables.css 파일을 import해주지 않으면 사용할 수 없는 색이다.  */
+
+#login-form input[type="submit"] {
+  background-color: silver;
+  cursor: pointer;
+  /* 커서를 가져가면 pointer모양으로 변하게된다. 화살표-->손가락 모양으로 변함   */
+  border-radius: 10px;
+  /* 테두리를 둥글게 */
+  padding: 20px 0px;
+}
+
+#login-form a {
+  text-align: center;
+  /* text-align 은 수평방향 설정  */
+  text-decoration: none;
+  color: inherit;
+  /* a로부터 상속받는 색상 이경우 default라서 검은색이다  */
+  font-size: 15px;
+}

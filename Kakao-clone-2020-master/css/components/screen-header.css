@@ -1,0 +1,45 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--horizontal-space);
+  /* 프로필 이미지와 Friends 글자의 왼쪽 틈 크기를 맞춘 것임. */
+  align-items: center;
+  /* 수평 방향 가운데 정렬 */
+  margin-bottom: 15px;
+}
+
+.screen-header__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-right: 15px;
+}
+
+@keyframes talkIsMyLife {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(360deg) translateX(5px);
+  }
+}
+
+@keyframes rotateCog {
+  from {
+    transfrom: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+    /* 2D로 그자리에서 아이콘이 360도로 돌게된다. */
+  }
+}
+
+.screen-header__icons .fa-cog {
+  animation: rotateCog 1s ease-in-out infinite;
+}
+
+.screen-header__icons .fa-comment-dots {
+  animation: talkIsMyLife 2s ease-in-out infinite;
+}

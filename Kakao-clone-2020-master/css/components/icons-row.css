@@ -1,0 +1,84 @@
+.icon-row,
+.icon-row__second {
+  display: flex;
+  justify-content: space-between;
+  /* 수평방향으로 적용되는 것이다. ㅡㅡㅡㅡㅡㅡㅡ이런 방향으로  */
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.icon-row__icon,
+.icon-row__icon__second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-row__icon i,
+.icon-row__icon__second i {
+  font-size: 40px;
+}
+
+.icon-row__icon span {
+  margin-top: 15px;
+}
+
+.message-row {
+  width: 100%;
+  /*  부모 요소에게 100% 비례(꽉차게)하는 가로폭을 설정하겠다는 뜻
+   명시적인 부모가 없으면 body가 부모가 된다. */
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 55px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.message__author {
+  opacity: 0.5;
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: block;
+  /* message__author은 span이며 따라서 display:inline상태이기 때문에 block으로 바꿔줘야 
+  margin-bottom:6px; 이 적용이 된다. */
+}
+
+.message__bubble {
+  background-color: white;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  /* 말풍선 처럼 만들기 위해서 각을 잡는 코드이다.
+  둥글게 만든 테두리를 왼쪽 위 모서리를 원래 상태로 되돌린다. */
+  margin-right: 10px;
+}
+.message__info {
+  display: flex;
+  /* 카톡 말풍선과 시간을 둘러싸는 contatiner이다.
+  display:flex; 를 설정할 경우에 정렬이 다시 flex에 맞춰서 된다.  */
+  align-items: flex-end;
+}
+
+.message__time {
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+  /* message-row는 display:flex; 상태이기 때문에 justify-content 
+  를 사용하여 정렬가능하다.*/
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  margin-left: 10px;
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+}
+/* 카톡 메세지 답장 부분의 css 코드 설정이다. */

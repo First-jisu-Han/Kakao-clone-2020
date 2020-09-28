@@ -1,0 +1,124 @@
+.recommended-friends {
+  margin: 25px 0px;
+  border-bottom: var(--main-border);
+  border-top: var(--main-border);
+  /* 실선이 두개 이기 때문에 변수 값을 가져와 적용해준다.  */
+  padding: 25px 0px;
+}
+
+.recommended-friends__title {
+  font-size: 13.5px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.recommended-friends span {
+  display: block;
+  text-align: center;
+  margin: 110px 0px;
+  /* display 자체가 inline으로 설정되어 있기 떄문에 margin 적용이 안된다.
+  같은 recommended-frineds div 에 있기 때문이다  */
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.4);
+  /* opacity(투명도)를 사용해도 된다. opacity:0.8; 과 같이.. */
+  margin-bottom: 25px;
+}
+.open-post {
+  display: flex;
+  justify-content: space-between;
+  /* open-post는 column을 두개 가지고 있는 class이기 때문에 두 컬럼을
+  떨어 뜨리기 위해서는 space between 설정을 해준다. */
+  align-items: center;
+}
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.open-post__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+  /* 대문자로 만드는 css 코드이다. */
+}
+
+.open-post__members {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__members-count {
+  opacity: 0.5;
+  font-size: 14px;
+}
+.open-post__members .divider {
+  width: 2px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.open-post__members-status {
+  color: tomato;
+}
+
+.open-post__column:last-child {
+  position: relative;
+}
+
+.open-post__column:last-child img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 9px;
+  right: 9px;
+  font-size: 12px;
+}
+
+.open-post__heart-count span {
+  margin-left: 3px;
+}
+
+@keyframes iconHeartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: crimson;
+    transform: scale(5);
+    /* 크기를 조율함. */
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* will-change는 기본적으로 브라우저에게 뭔가가 바뀔거라고 이야기해준다.
+    브라우저를 돕는행위이다:    */
+  animation: iconHeartBeat 1s linear infinite;
+  /* linear 라는 새로운 개념 */
+}

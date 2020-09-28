@@ -1,0 +1,119 @@
+.user-component {
+  display: flex;
+  justify-content: space-between;
+}
+.user-component__column {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+@keyframes UserAnimation {
+  from {
+    transform: translateY(19px);
+  }
+  to {
+    transform: translateY(-19px);
+  }
+}
+.host_user:hover {
+  animation: UserAnimation 3s ease-in-out;
+  border-top: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow);
+}
+.host_user {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.user-component__column2,
+.user-component__column3 {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 20px;
+}
+
+.user-component__title {
+  margin-right: 195px;
+  font-weight: 700px;
+  font-size: 20px;
+}
+
+.user-component__title2 {
+  margin-right: 155px;
+  font-weight: 700px;
+  font-size: 20px;
+}
+
+.user-component__muisic {
+  width: 165px;
+  height: 66px;
+}
+
+.user-component__subtitle {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__avatar--xl {
+  width: 70px;
+  height: 70px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.user-component__text2 {
+  margin-right: 375px;
+  font-weight: 200;
+}
+.user-component__column span,
+.fa-chevron-right {
+  color: rgba(0, 0, 0, 0.3);
+}
+/* 이코드는 channel에 2 하고 >  하나하나 일일이 색상을 다 바꿔버리는 코드
+자꾸 오류가 떠서 이렇게 설정함.    */
+
+.user-component__time {
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* .user-component__column:last-child {
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}*/
+
+.user-component__Channel-icon i {
+  padding: 10px;
+  font-size: 35px;
+  margin-right: 20px;
+  background-color: var(--yellow);
+  border-radius: 15px;
+}

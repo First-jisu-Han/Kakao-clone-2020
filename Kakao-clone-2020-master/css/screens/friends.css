@@ -1,0 +1,72 @@
+#friends-display {
+  text-align: center;
+  display: block;
+  background-color: #f9f9fa;
+  padding: 10px 0px;
+  margin-bottom: 5px;
+}
+
+.fa-paw {
+  display: inline-block;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 5px 5px;
+  font-size: 19px;
+  margin-left: 90px;
+  opacity: 0.9;
+}
+
+#friends-display i {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+
+  /* 프로필 이미지와 Friends 글자의 왼쪽 틈 크기를 맞춘 것임. */
+}
+
+@keyframes SplashScreenDelete {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* opacity가 0이면 안쪽의 화면이 보이나, 바깥쪽의 화면의 잔해가 
+    남아있고, 아이콘들의 클릭이 불가능하다. 따라서 visiblity:hidden;( 마우스에 
+    걸리지 않게 빠져버린다) 코드를 통하여 클릭가능한 상태로 만든다.  */
+  }
+}
+/* spalsh-screen이 완전히 보이는 상태에서 보이지 않는 상태로 
+전환시킨다. 투명하지 않은상태->투명하여 안보이는 상태  */
+
+#splash-screen {
+  background-color: silver;
+  color: white;
+  position: absolute;
+  /*   position:absolute; 이고 부모는 바로 위에 속하는 태그지만 
+  밑의 코드를 통해서 부모가 body가 되게끔 한다.  */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  /*  width:100vw;
+      height:100vh; 를 통해서 배경색의 적용범위를 크게 늘린다.
+      100vh의 뜻: 화면 높이의 100%를 의미한다.
+      top:0; 을 통하여 화면에 꽉차게 만들어 준다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* 화면에 아이콘을 중앙으로 옮기기 위해서 flex 설정이후 
+  center 설정을 해준다. */
+
+  font-size: 100px;
+
+  /* 아이콘의 크기를 크게 만든다. */
+  animation: SplashScreenDelete 0.4s ease-in-out forwards;
+  /* forwards는 마지막 keyframes를 기억한다. */
+  animation-delay: 2s;
+  /* 애니메이션을 지연시킨다. 애니메이션 시작 전에 기다려야하는 시간은
+  2초인 것이다. */
+}

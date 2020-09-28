@@ -1,0 +1,36 @@
+.alt-header {
+  padding: var(--horizontal-space);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33%;
+  margin-top: 20px;
+}
+
+.alt-header__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* 컬럼 끼리 서로 떨어뜨려놓기 위한 코드이다. */
+.alt-header__column:first-child {
+  margin-right: auto;
+}
+
+.alt-header__column:nth-child(2) {
+  margin-right: 110px;
+} /* 컬럼 끼리 서로 떨어뜨려놓기 위한 코드이다. */
+
+.alt-header__column span :last-child {
+  margin-left: auto;
+}
+
+#chat-screen .status-bar,
+#chat-screen .alt-header {
+  width: 100%;
+  /*  width: 100%; 을 줘야지 icon들이 밀리지 않는다 */
+  background-color: #abc1d1;
+  box-sizing: border-box;
+  top: 0;
+}
